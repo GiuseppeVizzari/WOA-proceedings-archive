@@ -1,0 +1,116 @@
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: #f8f9fa;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+}
+h1 {
+  margin: 0 0 0.2em 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 0.5em;
+}
+nav a {
+  color: #0074d9;
+  text-decoration: none;
+  font-size: 1rem;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.years-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+.years-list li {
+  margin: 1.2em 0;
+  font-size: 1.2rem;
+}
+.years-list a {
+  font-weight: 600;
+  color: #222;
+  text-decoration: none;
+}
+.years-list a:hover {
+  color: #0074d9;
+}
+.count {
+  color: #888;
+  font-size: 0.95em;
+  margin-left: 0.5em;
+}
+.papers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.paper-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 1.2rem 1.5rem;
+  border: 1px solid #e0e0e0;
+}
+.paper-title {
+  margin: 0 0 0.3em 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.paper-meta {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 0.7em;
+}
+.pdf-link {
+  display: inline-flex;
+  align-items: center;
+  background: #f3f7fa;
+  border-radius: 4px;
+  padding: 0.2em 0.7em 0.2em 0.4em;
+  color: #0074d9;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.pdf-link:hover {
+  background: #e6f0fa;
+  color: #005fa3;
+}
+.pdf-icon {
+  width: 1.1em;
+  height: 1.5em;
+  margin-right: 0.4em;
+  vertical-align: middle;
+}
+footer {
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+  margin: 3rem 0 1rem 0;
+}
+@media (max-width: 600px) {
+  main {
+    padding: 0 0.3rem;
+  }
+  .paper-card {
+    padding: 1rem 0.7rem;
+  }
+} 
