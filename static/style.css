@@ -1,55 +1,190 @@
+:root {
+  --background: #f7f7f7;
+  --foreground: #222;
+  --header-footer-bg: #2d3a4a;
+  --header-footer-fg: #fff;
+  --accent: #b71c1c;
+  --link: #1a73e8;
+  --toggle-bg: #fff;
+  --toggle-fg: #222;
+  --subtitle: #e0e6ef;
+  --heading: #222;
+}
+
+body[data-theme='dark'] {
+  --background: #181a1b;
+  --foreground: #f7f7f7;
+  --header-footer-bg: #23272e;
+  --header-footer-fg: #fff;
+  --accent: #ff5252;
+  --link: #8ab4f8;
+  --toggle-bg: #23272e;
+  --toggle-fg: #fff;
+  --subtitle: #b0b8c7;
+  --heading: #f7f7f7;
+}
+
 body {
-  font-family: 'Segoe UI', 'Arial', sans-serif;
-  background: #f8f9fa;
-  color: #222;
+  background: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+#site-header {
+  background: var(--header-footer-bg);
+  color: var(--header-footer-fg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+#site-header .header-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 1.2rem 1.5rem 1rem 1.5rem;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+#theme-toggle {
+  background: var(--toggle-bg);
+  color: var(--toggle-fg);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+#site-footer {
+  background: var(--header-footer-bg);
+  color: var(--header-footer-fg);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  font-size: 0.95rem;
+  z-index: 1000;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+  height: 40px;
+  min-height: 40px;
+}
+
+.footer-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#site-footer p {
   margin: 0;
   padding: 0;
-}
-header {
-  background: #fff;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 2rem 1rem 1rem 1rem;
   text-align: center;
+  width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
-h1 {
-  margin: 0 0 0.2em 0;
-  font-size: 2.2rem;
-  font-weight: 700;
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--header-height, 110px) 1rem 1rem 1rem;
+  padding-bottom: 50px;
 }
-.subtitle {
-  color: #666;
-  font-size: 1.1rem;
-  margin-bottom: 0.5em;
-}
-nav a {
-  color: #0074d9;
+
+a {
+  color: var(--link);
   text-decoration: none;
-  font-size: 1rem;
+  transition: color 0.2s;
 }
-nav a:hover {
+a:hover {
+  color: var(--accent);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding-top: 0.5rem;
+  color: var(--link);
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.back-link:hover {
+  color: var(--accent);
   text-decoration: underline;
 }
-main {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
+
 .years-list ul {
   list-style: none;
   padding: 0;
-  margin: 2rem 0;
+  margin: 0;
 }
 .years-list li {
-  margin: 1.2em 0;
+  margin: 1.2rem 0;
   font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+.years-list .count {
+  margin-left: 0.7em;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--subtitle);
+  margin: 0.2em 0 0 0;
+  opacity: 1;
+}
+
+h1, h3, .paper-title {
+  color: var(--heading);
+}
+
+.paper-card,
+.paper-card h2,
+.paper-card .paper-title,
+.paper-card .paper-meta {
+  color: #222;
 }
 .years-list a {
   font-weight: 600;
-  color: #222;
+  color: var(--heading);
   text-decoration: none;
 }
 .years-list a:hover {
-  color: #0074d9;
+  color: var(--accent);
 }
 .count {
   color: #888;

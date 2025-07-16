@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WOA Proceedings Archive</title>
   <link rel="stylesheet" href="static/style.css">
+  <script defer src="static/theme-toggle.js"></script>
 </head>
 <body>
-  <header>
-    <h1>WOA Proceedings Archive</h1>
-    <p class="subtitle">Workshop "From Objects to Agents" (2000–2004)</p>
+  <header id="site-header">
+    <div class="header-inner">
+      <div class="header-content">
+        <h1>WOA Proceedings Archive</h1>
+        <p class="subtitle">Workshop "From Objects to Agents" (2000–2004)</p>
+      </div>
+      <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+    </div>
   </header>
   <main>
     <section class="years-list">
@@ -43,8 +49,10 @@
       </ul>
     </section>
   </main>
-  <footer>
-    <p>Site generated for archival and research purposes. <a href="https://github.com/">GitHub Pages</a> compatible.</p>
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <p>Site generated for archival and research purposes. <a href="https://github.com/">GitHub Pages</a> compatible.</p>
+    </div>
   </footer>
 </body>
 </html> 

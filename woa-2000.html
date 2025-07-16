@@ -5,13 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WOA 2000 Proceedings</title>
   <link rel="stylesheet" href="static/style.css">
+  <script defer src="static/theme-toggle.js"></script>
 </head>
 <body>
-  <header>
-    <h1>WOA 2000 Proceedings</h1>
-    <nav><a href="index.html">&larr; Back to Archive Index</a></nav>
+  <header id="site-header">
+    <div class="header-inner">
+      <div class="header-content">
+        <h1>WOA 2000 Proceedings</h1>
+        <p class="subtitle">Workshop "From Objects to Agents"</p>
+      </div>
+      <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+    </div>
   </header>
   <main>
+    <a href="index.html" class="back-link">&larr; Back to Archive Index</a>
     <section class="papers-list">
       
       <article class="paper-card">
@@ -293,8 +300,10 @@ Open Distributed Systems</h2>
       
     </section>
   </main>
-  <footer>
-    <p>Site generated for archival and research purposes. <a href="https://github.com/">GitHub Pages</a> compatible.</p>
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <p>Site generated for archival and research purposes. <a href="https://github.com/">GitHub Pages</a> compatible.</p>
+    </div>
   </footer>
 </body>
 </html> 

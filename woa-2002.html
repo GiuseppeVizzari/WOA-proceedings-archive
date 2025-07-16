@@ -5,17 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WOA 2002 Proceedings</title>
   <link rel="stylesheet" href="static/style.css">
+  <script defer src="static/theme-toggle.js"></script>
 </head>
 <body>
-  <header>
-    <h1>WOA 2002 Proceedings</h1>
-    <nav><a href="index.html">&larr; Back to Archive Index</a></nav>
+  <header id="site-header">
+    <div class="header-inner">
+      <div class="header-content">
+        <h1>WOA 2002 Proceedings</h1>
+        <p class="subtitle">Workshop "From Objects to Agents"</p>
+      </div>
+      <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+    </div>
   </header>
   <main>
+    <a href="index.html" class="back-link">&larr; Back to Archive Index</a>
     <section class="papers-list">
       
       <article class="paper-card">
-        <h2 class="paper-title">Peer-to-Peer and Multi-Agent Systems technologies for Knowledge Management Applications. An Agent-Oriented analysis.</h2>
+        <h2 class="paper-title">Peer-to-Peer and Multi-Agent Systems technologies for Knowledge Management Applications. An Agent-Oriented analysis</h2>
         <div class="paper-meta">
           <span class="paper-authors">D. Bertolini, P. Busetta, M. Nori, A. Perini</span>
         </div>
@@ -211,7 +218,7 @@
         <h2 class="paper-title">How to Dynamically Add Roles to Agents</h2>
         <div class="paper-meta">
           <span class="paper-authors">G. Cabri, ,
-	L. FerrariL. Leonardi</span>
+	L. Ferrari,, L. Leonardi</span>
         </div>
         
         <a class="pdf-link" href="pdfs/woa2002/07.pdf" target="_blank" title="Download PDF">
@@ -282,8 +289,10 @@
       
     </section>
   </main>
-  <footer>
-    <p>Site generated for archival and research purposes. <a href="https://github.com/">GitHub Pages</a> compatible.</p>
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <p>Site generated for archival and research purposes. <a href="https://github.com/">GitHub Pages</a> compatible.</p>
+    </div>
   </footer>
 </body>
 </html> 
