@@ -29,8 +29,21 @@ toggleBtn.addEventListener('click', toggleTheme);
 function setHeaderHeightVar() {
   const header = document.getElementById('site-header');
   if (header) {
-    document.body.style.setProperty('--header-height', header.offsetHeight + 'px');
+    document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px');
   }
 }
 window.addEventListener('DOMContentLoaded', setHeaderHeightVar);
-window.addEventListener('resize', setHeaderHeightVar); 
+window.addEventListener('resize', setHeaderHeightVar);
+window.addEventListener('orientationchange', setHeaderHeightVar);
+window.addEventListener('load', setHeaderHeightVar);
+
+// Use ResizeObserver for robust header height updates
+(function() {
+  const header = document.getElementById('site-header');
+  if (header && window.ResizeObserver) {
+    const ro = new ResizeObserver(() => {
+      setHeaderHeightVar();
+    });
+    ro.observe(header);
+  }
+})(); 
